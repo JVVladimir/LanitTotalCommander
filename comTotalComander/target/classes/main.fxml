@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane prefHeight="802.0" prefWidth="1158.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+    <children>
+        <SplitPane dividerPositions="0.29797979797979796" layoutY="77.0" prefHeight="725.0" prefWidth="1121.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="723.0" prefWidth="564.0">
+                    <children>
+                        <TableView fx:id="tableView1" layoutX="1.0" layoutY="14.0" onMouseClicked="#onClickedTableView1" prefHeight="509.0" prefWidth="556.0">
+                            <columns>
+                                <TableColumn fx:id="name1" prefWidth="114.0" text="Имя" />
+                                <TableColumn fx:id="type1" prefWidth="53.0" text="Тип" />
+                                <TableColumn fx:id="dateChanged1" prefWidth="115.0" text="Дата изменения" />
+                                <TableColumn fx:id="dateCreate1" prefWidth="154.0" text="Дата создания" />
+                                <TableColumn fx:id="size1" prefWidth="119.0" text="Размер (кБайт)" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="723.0" prefWidth="556.0">
+                    <children>
+                        <TableView fx:id="tableView2" layoutY="14.0" onMouseClicked="#onClickedTableView2" prefHeight="509.0" prefWidth="556.0">
+                            <columns>
+                                <TableColumn fx:id="name2" prefWidth="136.0" text="Имя" />
+                                <TableColumn fx:id="type2" prefWidth="55.0" text="Тип" />
+                                <TableColumn fx:id="dateChanged2" prefWidth="143.0" text="Дата изменения" />
+                                <TableColumn fx:id="dateCreate2" prefWidth="113.0" text="Дата создания" />
+                                <TableColumn fx:id="size2" prefWidth="108.0" text="Размер (кБайт)" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <FlowPane prefHeight="34.0" prefWidth="969.0">
+            <children>
+                <Button fx:id="btnRef" mnemonicParsing="false" onAction="#onRefresh" text="Обновить" />
+                <Button mnemonicParsing="false" text="Копировать имя" />
+                <Button mnemonicParsing="false" text="Копировать путь" />
+                <Button mnemonicParsing="false" text="Верезать" />
+                <Button mnemonicParsing="false" text="Вставить" />
+                <Button mnemonicParsing="false" text="Создать" />
+                <Button mnemonicParsing="false" text="Удалить" />
+                <Button mnemonicParsing="false" text="Переименовать" />
+                <Button mnemonicParsing="false" text="Поиск" />
+            </children>
+        </FlowPane>
+        <Button fx:id="btnBack1" alignment="TOP_LEFT" layoutX="1.0" layoutY="52.0" mnemonicParsing="false" onMouseClicked="#onBtnBack1" prefHeight="25.0" prefWidth="397.0" text="Назад">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu></Button>
+        <Button fx:id="btnBack2" alignment="TOP_LEFT" layoutX="564.0" layoutY="52.0" mnemonicParsing="false" onMouseClicked="#onBtnBack2" prefHeight="25.0" prefWidth="397.0" text="Назад" />
+      <ChoiceBox fx:id="choiceBox1" layoutX="410.0" layoutY="52.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="choiceBox2" layoutX="971.0" layoutY="52.0" prefWidth="150.0" />
+    </children>
+</AnchorPane>
